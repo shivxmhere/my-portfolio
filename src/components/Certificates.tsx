@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import { motion } from 'motion/react';
 import MagicText from './MagicText';
 
@@ -60,6 +61,60 @@ const certificates = [
   }
 ];
 
+function CertCard({ cert, index }: { cert: typeof certificates[0]; index: number }) {
+  const [isActive, setIsActive] = useState(false);
+
+  const handleTouchStart = () => setIsActive(true);
+  const handleTouchEnd = () => {
+    setTimeout(() => setIsActive(false), 2000);
+  };
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.6, delay: index * 0.1 }}
+      className={`group cursor-pointer flex flex-col h-full`}
+      onTouchStart={handleTouchStart}
+      onTouchEnd={handleTouchEnd}
+      onMouseEnter={() => setIsActive(true)}
+      onMouseLeave={() => setIsActive(false)}
+    >
+      <div className="relative overflow-hidden rounded-lg shadow-sm border border-[#E5E5E5] aspect-[4/3] mb-6 bg-gray-100">
+        <motion.div
+          animate={{ scale: isActive ? 1.05 : 1 }}
+          transition={{ duration: 0.5 }}
+          className="w-full h-full"
+        >
+          <img
+            src={cert.image}
+            alt={cert.title}
+            className="w-full h-full object-cover transition-all duration-500"
+            style={{ filter: isActive ? 'grayscale(0)' : 'grayscale(1)' }}
+          />
+        </motion.div>
+        <div
+          className="absolute inset-0 transition-colors duration-300"
+          style={{ backgroundColor: isActive ? 'rgba(0,0,0,0.1)' : 'rgba(0,0,0,0)' }}
+        />
+      </div>
+
+      <div className="flex flex-col space-y-2 flex-grow">
+        <div className="flex justify-between items-start gap-4">
+          <h3
+            className="text-xl font-bold transition-colors duration-300 line-clamp-2"
+            style={{ color: isActive ? '#9C6455' : 'inherit' }}
+          >{cert.title}</h3>
+          <span className="text-[#707070] text-xs font-mono border border-[#707070] px-2 py-1 rounded-full whitespace-nowrap">{cert.date}</span>
+        </div>
+        <p className="text-[#5E3A30] text-xs uppercase tracking-widest font-medium">{cert.issuer}</p>
+        <p className="text-[#707070] text-sm leading-relaxed line-clamp-3">{cert.description}</p>
+      </div>
+    </motion.div>
+  );
+}
+
 export default function Certificates() {
   return (
     <section id="certificates" className="py-24 px-6 md:px-12 lg:px-24 bg-[#FDFDFD]">
@@ -67,40 +122,10 @@ export default function Certificates() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {certificates.map((cert, index) => (
-          <motion.div
-            key={index}
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: index * 0.1 }}
-            className="group cursor-pointer flex flex-col h-full"
-          >
-            <div className="relative overflow-hidden rounded-lg shadow-sm border border-[#E5E5E5] aspect-[4/3] mb-6 bg-gray-100">
-              <motion.div
-                whileHover={{ scale: 1.05 }}
-                transition={{ duration: 0.5 }}
-                className="w-full h-full"
-              >
-                <img
-                  src={cert.image}
-                  alt={cert.title}
-                  className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
-                />
-              </motion.div>
-              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300" />
-            </div>
-
-            <div className="flex flex-col space-y-2 flex-grow">
-              <div className="flex justify-between items-start gap-4">
-                <h3 className="text-xl font-bold group-hover:text-[#9C6455] transition-colors duration-300 line-clamp-2">{cert.title}</h3>
-                <span className="text-[#707070] text-xs font-mono border border-[#707070] px-2 py-1 rounded-full whitespace-nowrap">{cert.date}</span>
-              </div>
-              <p className="text-[#5E3A30] text-xs uppercase tracking-widest font-medium">{cert.issuer}</p>
-              <p className="text-[#707070] text-sm leading-relaxed line-clamp-3">{cert.description}</p>
-            </div>
-          </motion.div>
+          <CertCard key={index} cert={cert} index={index} />
         ))}
       </div>
     </section>
   );
 }
+
