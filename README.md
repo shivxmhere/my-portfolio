@@ -1,11 +1,22 @@
-<div align="center">
+# Shivam Singh Portfolio
 
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+This is a bespoke editorial portfolio and admin hub for Shivam Singh.
 
-  <h1>Built with AI Studio</h2>
+## Features
 
-  <p>The fastest path from prompt to production with Gemini.</p>
+- **Clean Brutalism Design**: Minimalist, typography-driven.
+- **Admin Dashboard**: Manage projects and resume.
+- **Secure Auth**: JWT-based authentication.
+- **Analytics**: Track page views and downloads.
+- **Tech Stack**: React, Tailwind CSS, Framer Motion, Express, SQLite.
 
-  <a href="https://aistudio.google.com/apps">Start building</a>
+## Admin Access
 
-</div>
+- URL: `/admin`
+- Username: `admin`
+- Password: `admin123`
+
+## Development
+
+- Run `npm run dev` to start the server.
+- The server runs on port 3000.

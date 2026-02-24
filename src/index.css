@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap');
+
+@theme {
+  --font-sans: "Inter", sans-serif;
+  --font-serif: "Lora", serif;
+
+  --color-bg: #FDFDFD;
+  --color-text: #0A0909;
+  --color-muted: #707070;
+  --color-accent: #9C6455;
+  --color-accent-dark: #5E3A30;
+  --color-surface: #CEB3A6;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* Custom Cursor */
+.cursor-dot {
+  width: 10px;
+  height: 10px;
+  background-color: var(--color-text);
+}
+
+.cursor-outline {
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--color-text);
+}
+
+/* Lenis */
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+@keyframes magic-color {
+  0% { color: #ff0000; text-shadow: 0 0 10px #ff0000; }
+  15% { color: #ff7f00; text-shadow: 0 0 10px #ff7f00; }
+  30% { color: #ffff00; text-shadow: 0 0 10px #ffff00; }
+  45% { color: #00ff00; text-shadow: 0 0 10px #00ff00; }
+  60% { color: #00ffff; text-shadow: 0 0 10px #00ffff; }
+  75% { color: #0000ff; text-shadow: 0 0 10px #0000ff; }
+  90% { color: #9400d3; text-shadow: 0 0 10px #9400d3; }
+  100% { color: inherit; text-shadow: none; }
+}
+
+.magic-char {
+  animation: magic-color 1.5s ease-out forwards;
+}
