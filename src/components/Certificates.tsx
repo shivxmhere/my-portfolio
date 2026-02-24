@@ -61,7 +61,13 @@ const certificates = [
   }
 ];
 
-function CertCard({ cert, index }: { cert: typeof certificates[0]; index: number }) {
+interface CertCardProps {
+  cert: typeof certificates[0];
+  index: number;
+  key?: React.Key;
+}
+
+function CertCard({ cert, index }: CertCardProps) {
   const [isActive, setIsActive] = useState(false);
 
   const handleTouchStart = () => setIsActive(true);

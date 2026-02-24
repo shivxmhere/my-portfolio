@@ -1,3 +1,4 @@
+import React from 'react';
 import { motion } from 'motion/react';
 import { Instagram, Linkedin, Github, ExternalLink } from 'lucide-react';
 import MagicText from './MagicText';
@@ -85,6 +86,7 @@ export default function Footer() {
   );
 }
 
+
 function SocialLink({ href, icon, label }: { href: string, icon: React.ReactNode, label: string }) {
   return (
     <motion.a
@@ -103,3 +105,4 @@ function SocialLink({ href, icon, label }: { href: string, icon: React.ReactNode
     </motion.a>
   );
 }
+
