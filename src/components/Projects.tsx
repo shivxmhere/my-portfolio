@@ -7,7 +7,7 @@ const projects = [
     category: "AI & Agriculture",
     description: "AI-powered agricultural intelligence platform empowering farmers with crop planning, yield prediction, and decision-making insights. Built to solve real-world farming challenges.",
     tags: ["Python", "NLP", "Machine Learning"],
-    year: "2025",
+    year: "2026",
     image_url: "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?q=80&w=1000&auto=format&fit=crop"
   },
   {
@@ -79,10 +79,10 @@ export default function Projects() {
               <h3 className="text-2xl md:text-3xl font-bold group-hover:text-[#9C6455] transition-colors duration-300">{project.title}</h3>
               <span className="text-[#707070] text-xs font-mono border border-[#707070] px-2 py-1 rounded-full">{project.year}</span>
             </div>
-            
+
             <p className="text-[#707070] text-sm uppercase tracking-widest mb-4">{project.category}</p>
             <p className="text-[#0A0909] leading-relaxed mb-6 max-w-md">{project.description}</p>
-            
+
             <div className="flex flex-wrap gap-2">
               {project.tags.map((tag, i) => (
                 <span key={i} className="bg-[#F5F5F5] text-[#5E3A30] px-3 py-1 text-xs uppercase tracking-wide rounded-sm">
