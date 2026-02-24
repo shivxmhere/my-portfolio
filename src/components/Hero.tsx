@@ -39,6 +39,27 @@ export default function Hero() {
     }
   };
 
+  const handleTouchStart = () => {
+    setIsHovered(true);
+  };
+
+  const handleTouchEnd = () => {
+    // Keep it lit for a moment after touch ends
+    setTimeout(() => setIsHovered(false), 1500);
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    if (Math.random() > 0.5) {
+      const rect = e.currentTarget.getBoundingClientRect();
+      const touch = e.touches[0];
+      const x = touch.clientX - rect.left;
+      const y = touch.clientY - rect.top;
+      const id = Date.now() + Math.random();
+      setSparkles(prev => [...prev.slice(-8), { id, x, y }]);
+      setTimeout(() => setSparkles(prev => prev.filter(s => s.id !== id)), 800);
+    }
+  };
+
   return (
     <section className="min-h-screen flex flex-col md:flex-row items-center justify-between px-6 md:px-12 lg:px-24 pt-32 pb-16 bg-[#FDFDFD] text-[#0A0909]">
       <div className="md:w-3/5 z-10">
@@ -101,6 +122,9 @@ export default function Hero() {
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
           onMouseMove={handleMouseMove}
+          onTouchStart={handleTouchStart}
+          onTouchEnd={handleTouchEnd}
+          onTouchMove={handleTouchMove}
         >
           {/* Sparkle particles on hover */}
           {sparkles.map(sparkle => (
@@ -124,11 +148,16 @@ export default function Hero() {
           <motion.img
             src="/profile-sticker.png"
             alt="Shivam Singh"
-            initial={{ scale: 1.3, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
+            initial={{ scale: 1.3, opacity: 0, filter: 'grayscale(1)' }}
+            animate={{
+              scale: 1,
+              opacity: 1,
+              filter: isHovered ? 'grayscale(0)' : 'grayscale(1)'
+            }}
             transition={{ duration: 1.8, ease: [0.16, 1, 0.3, 1], delay: 0.5 }}
             whileHover={{ scale: 1.03 }}
-            className="w-full h-full object-cover object-top grayscale hover:grayscale-0 transition-all duration-700 rounded-lg relative z-10"
+            whileTap={{ scale: 1.03 }}
+            className="w-full h-full object-cover object-top transition-all duration-700 rounded-lg relative z-10"
           />
         </motion.div>
       </div>
