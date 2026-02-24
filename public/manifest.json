@@ -1,0 +1,21 @@
+{
+    "name": "Shivam Singh Portfolio",
+    "short_name": "Shivam Singh",
+    "description": "Shivam Singh — Data Analyst & AI Developer at IIT Patna. Portfolio showcasing projects in AI, Machine Learning, Data Science, and Full-Stack Development.",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#0A0909",
+    "theme_color": "#0A0909",
+    "icons": [
+        {
+            "src": "/icon-192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/icon-512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}

@@ -6,56 +6,56 @@ const certificates = [
     title: "Innovathon 1.0 - 3rd Position",
     issuer: "University of Jammu (SIIEDC)",
     date: "Feb 2026",
-    image: "/certificates/innovathon-3rd.png",
+    image: "/certificates/innovathon-3rd.jpg",
     description: "Secured 3rd Position in the National Level Hackathon 'Innovathon 1.0' organized by SIIEDC, University of Jammu."
   },
   {
     title: "SnowStorm Hackathon",
     issuer: "Tech4Hack",
     date: "2025",
-    image: "/certificates/snowstorm-hackathon.png",
+    image: "/certificates/snowstorm-hackathon.jpg",
     description: "Certificate of Participation for demonstrating technical skills and innovation in the high-intensity SnowStorm Hackathon."
   },
   {
     title: "Generative AI Workshop",
     issuer: "Techgyan @ IIT Delhi",
     date: "July 2025",
-    image: "/certificates/techgyan-iitdelhi-genai.png",
+    image: "/certificates/techgyan-iitdelhi-genai.jpg",
     description: "Participated in a hands-on workshop on Generative AI organized by Techgyan Technologies at IIT Delhi."
   },
   {
     title: "Generative AI Mastermind",
     issuer: "Outskill",
     date: "2025",
-    image: "/certificates/outskill-genai.png",
+    image: "/certificates/outskill-genai.jpg",
     description: "Successfully completed the Generative AI Mastermind course, mastering prompt engineering and LLM applications."
   },
   {
     title: "Introduction to Data Analytics",
     issuer: "Simplilearn",
     date: "Sept 2025",
-    image: "/certificates/simplilearn-data-analytics.png",
+    image: "/certificates/simplilearn-data-analytics.jpg",
     description: "Professional certification demonstrating initiative and commitment to deepening skills in Data Analytics."
   },
   {
     title: "Data Science & Analytics",
     issuer: "HP LIFE",
     date: "Sept 2025",
-    image: "/certificates/hp-life-data-science.png",
+    image: "/certificates/hp-life-data-science.jpg",
     description: "Completed the HP LIFE online course on Data Science & Analytics, covering essential tools and methodologies."
   },
   {
     title: "JavaScript Bootcamp",
     issuer: "LetsUpgrade",
     date: "Sept 2025",
-    image: "/certificates/letsupgrade-js-bootcamp.png",
+    image: "/certificates/letsupgrade-js-bootcamp.jpg",
     description: "Successfully completed a 3-day intensive JavaScript Bootcamp in collaboration with ITM Edutech Training Pvt. Ltd."
   },
   {
     title: "Content Writing Internship",
     issuer: "InAmigos Foundation",
     date: "Sept 2025",
-    image: "/certificates/inamigos-internship.png",
+    image: "/certificates/inamigos-internship.jpg",
     description: "Certificate of Internship for successful completion of Content Writing tenure from 11/09/2025 to 24/09/2025."
   }
 ];
