@@ -1,3 +1,0 @@
-src/components/Certificates.tsx(125,21): error TS2322: Type '{ key: number; cert: { title: string; issuer: string; date: string; image: string; description: string; }; index: number; }' is not assignable to type '{ cert: { title: string; issuer: string; date: string; image: string; description: string; }; index: number; }'.
-  Property 'key' does not exist on type '{ cert: { title: string; issuer: string; date: string; image: string; description: string; }; index: number; }'.
-src/components/Footer.tsx(88,66): error TS2503: Cannot find namespace 'React'.
