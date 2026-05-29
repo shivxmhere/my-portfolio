@@ -43,6 +43,14 @@ const certifications = [
     date: "March 2026",
     detail: "Part of a global network of student ambassadors building tech communities.",
     isPremium: true
+  },
+  {
+    title: "Innovathon 1.0",
+    issuer: "University of Jammu",
+    icon: <Trophy className="text-[var(--accent-1)]" size={32} />,
+    date: "April 2025",
+    detail: "Secured 3rd place in the national level hackathon.",
+    isPremium: false
   }
 ];
 
