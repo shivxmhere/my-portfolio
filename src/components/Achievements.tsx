@@ -45,11 +45,11 @@ const certifications = [
     isPremium: true
   },
   {
-    title: "Innovathon 1.0",
-    issuer: "University of Jammu",
+    title: "1st Prize",
+    issuer: "TRAE Re{Vibe} Hackathon",
     icon: <Trophy className="text-[var(--accent-1)]" size={32} />,
-    date: "April 2025",
-    detail: "Secured 3rd place in the national level hackathon.",
+    date: "May 2026",
+    detail: "Secured 1st place in the national hackathon.",
     isPremium: false
   }
 ];
@@ -82,24 +82,24 @@ export default function Achievements() {
           onMouseEnter={triggerConfetti}
           className="relative w-full rounded-3xl overflow-hidden mb-24 group cursor-pointer"
         >
-          {/* Gold Gradient Background */}
-          <div className="absolute inset-0 bg-gradient-to-br from-[#FFD700]/20 via-[#FFA500]/10 to-transparent z-0 group-hover:opacity-100 transition-opacity duration-500" />
-          <div className="absolute inset-0 border-2 border-[#FFD700]/40 rounded-3xl z-0 group-hover:border-[#FFD700] group-hover:shadow-[0_0_30px_rgba(255,215,0,0.3)] transition-all duration-500" />
+          {/* Cyan/Blue Gradient Background */}
+          <div className="absolute inset-0 bg-gradient-to-br from-[#00d4ff]/20 via-[#0a66c2]/10 to-transparent z-0 group-hover:opacity-100 transition-opacity duration-500" />
+          <div className="absolute inset-0 border-2 border-[#00d4ff]/40 rounded-3xl z-0 group-hover:border-[#00d4ff] group-hover:shadow-[0_0_30px_rgba(0,212,255,0.3)] transition-all duration-500" />
 
           <div className="relative z-10 flex flex-col md:flex-row items-center p-8 md:p-16 gap-8 backdrop-blur-sm">
-            <div className="w-32 h-32 md:w-48 md:h-48 rounded-full bg-gradient-to-br from-[#FFD700] to-[#FF8C00] flex items-center justify-center flex-shrink-0 shadow-[0_0_40px_rgba(255,215,0,0.5)] group-hover:scale-110 transition-transform duration-500">
+            <div className="w-32 h-32 md:w-48 md:h-48 rounded-full bg-gradient-to-br from-[#00d4ff] to-[#0a66c2] flex items-center justify-center flex-shrink-0 shadow-[0_0_40px_rgba(0,212,255,0.5)] group-hover:scale-110 transition-transform duration-500">
               <Trophy size={64} className="text-[var(--bg-primary)]" />
             </div>
 
             <div className="flex-1 text-center md:text-left">
-              <span className="inline-block px-4 py-1 rounded-full bg-[#FFD700]/10 text-[#FFD700] font-mono text-sm border border-[#FFD700]/30 mb-4 tracking-widest uppercase">
+              <span className="inline-block px-4 py-1 rounded-full bg-[#00d4ff]/10 text-[#00d4ff] font-mono text-sm border border-[#00d4ff]/30 mb-4 tracking-widest uppercase">
                 Featured Achievement
               </span>
-              <h3 className="text-4xl md:text-5xl font-[family-name:--font-display] font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-[#FFD700] to-[#FFA500]">
-                1st Prize — TRAE Re{'{'}Vibe{'}'} Hackathon &<br />National Hackathon Winner
+              <h3 className="text-4xl md:text-5xl font-[family-name:--font-display] font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-[#00d4ff] to-[#0a66c2]">
+                1st Prize — Jammu Innovathon 1.0<br />National Hackathon Winner
               </h3>
               <p className="text-xl md:text-2xl font-[family-name:--font-sans] text-[var(--text-main)] opacity-90">
-                Featured Achievements
+                University of Jammu
               </p>
             </div>
           </div>

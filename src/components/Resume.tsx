@@ -33,7 +33,7 @@ export default function Resume() {
   const skillCategories = [
     {
       title: "Languages", icon: <Code size={24} />, delay: 0,
-      skills: ["Python", "SQL", "JavaScript"]
+      skills: ["Python", "SQL", "JavaScript", "HTML", "CSS"]
     },
     {
       title: "AI / ML", icon: <Brain size={24} />, delay: 0.2,

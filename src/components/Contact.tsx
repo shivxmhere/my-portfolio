@@ -12,25 +12,19 @@ export default function Contact() {
 
         try {
             const formData = new FormData(e.currentTarget);
-            // Using FormSubmit.co for direct-to-email routing without backend
-            const response = await fetch("https://formsubmit.co/ajax/shivamhere6257@gmail.com", {
-                method: "POST",
-                headers: {
-                    'Accept': 'application/json'
-                },
-                body: formData
-            });
+            const name = formData.get('name');
+            const email = formData.get('email');
+            const message = formData.get('message');
 
-            if (response.ok) {
-                setFormState('success');
-                setTimeout(() => setFormState('idle'), 4000);
-                (e.target as HTMLFormElement).reset();
-            } else {
-                throw new Error("Failed to send");
-            }
+            // Fallback to mailto as reliable submission without backend auth
+            window.location.href = `mailto:shivamhere6257@gmail.com?subject=Contact from ${name}&body=${message}%0A%0AFrom: ${email}`;
+
+            setFormState('success');
+            setTimeout(() => setFormState('idle'), 4000);
+            (e.target as HTMLFormElement).reset();
         } catch (error) {
             setFormState('error');
-            setErrorMessage('Failed to send message. Please try again.');
+            setErrorMessage('Failed to open mail client.');
             setTimeout(() => setFormState('idle'), 4000);
         }
     };

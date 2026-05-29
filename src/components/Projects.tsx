@@ -4,6 +4,20 @@ import { Github, ExternalLink } from 'lucide-react';
 
 const projects = [
   {
+    title: "MedLexica",
+    description: "Production-grade clinical AI system utilizing semantic vector search, knowledge graphs, and cross-encoder re-ranking in a hybrid RAG pipeline. Powered by a QLoRA fine-tuned Phi-3 model.",
+    category: "AI/ML",
+    tags: ["Phi-3", "RAG", "FastAPI", "Vector Search"],
+    github: "https://github.com/shivxmhere"
+  },
+  {
+    title: "AGORA",
+    description: "Production-grade AI Agent Marketplace where developers publish autonomous agents and users discover, deploy, and chain them into complex pipelines. Unified interface for agentic execution.",
+    category: "AI/ML",
+    tags: ["AI Agents", "Marketplace", "Pipelines"],
+    github: "https://github.com/shivxmhere"
+  },
+  {
     title: "RAGE OS",
     description: "A comprehensive Student OS integrating tools into one ecosystem.",
     category: "Web",
@@ -15,13 +29,6 @@ const projects = [
     description: "Automation tools reducing manual effort by 60% for content workflows.",
     category: "Data",
     tags: ["Python", "Automation"],
-    github: "https://github.com/shivxmhere"
-  },
-  {
-    title: "Gen AI Applications",
-    description: "Explored generative AI models and prompt engineering techniques.",
-    category: "AI/ML",
-    tags: ["LLMs", "Prompt Engineering"],
     github: "https://github.com/shivxmhere"
   }
 ];
