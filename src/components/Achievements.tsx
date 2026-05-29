@@ -35,6 +35,14 @@ const certifications = [
     date: "Sept 2025",
     detail: "Core concepts of data processing, visualization, and strategic analytics.",
     isPremium: false
+  },
+  {
+    title: "Microsoft Learn Student Ambassador",
+    issuer: "Microsoft",
+    icon: <Star className="text-[var(--accent-1)]" size={32} />,
+    date: "March 2026",
+    detail: "Part of a global network of student ambassadors building tech communities.",
+    isPremium: true
   }
 ];
 
@@ -79,11 +87,11 @@ export default function Achievements() {
               <span className="inline-block px-4 py-1 rounded-full bg-[#FFD700]/10 text-[#FFD700] font-mono text-sm border border-[#FFD700]/30 mb-4 tracking-widest uppercase">
                 Featured Achievement
               </span>
-              <h3 className="text-4xl md:text-6xl font-[family-name:--font-display] font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-[#FFD700] to-[#FFA500]">
-                3rd Place — Innovathon 1.0
+              <h3 className="text-4xl md:text-5xl font-[family-name:--font-display] font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-[#FFD700] to-[#FFA500]">
+                1st Prize — TRAE Re{'{'}Vibe{'}'} Hackathon &<br />National Hackathon Winner
               </h3>
               <p className="text-xl md:text-2xl font-[family-name:--font-sans] text-[var(--text-main)] opacity-90">
-                University of Jammu
+                Featured Achievements
               </p>
             </div>
           </div>

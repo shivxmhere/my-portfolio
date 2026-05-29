@@ -103,7 +103,7 @@ export default function Footer() {
 
       <div className="relative z-10 flex flex-col items-center justify-center max-w-7xl mx-auto px-6 text-center gap-4">
         <h3 className="text-xl md:text-2xl font-[family-name:--font-display] font-bold tracking-tight">
-          Designed & Built by Shivam Singh &copy; 2025
+          Designed & Built by Shivam Singh &copy; 2026
         </h3>
 
         <p className="font-mono text-sm text-[var(--accent-1)] tracking-widest uppercase">

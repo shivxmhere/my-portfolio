@@ -24,10 +24,10 @@ const CountUp = ({ end, duration = 2 }: { end: number, duration?: number }) => {
 
 export default function Resume() {
   const stats = [
-    { label: "Years Coding", value: 1, prefix: "", suffix: "+" },
-    { label: "Projects Built", value: 5, prefix: "", suffix: "+" },
-    { label: "Certifications", value: 5, prefix: "", suffix: "" },
-    { label: "Hackathon Win", value: 1, prefix: "", suffix: " 🏆" },
+    { label: "Years Coding", value: 2, prefix: "", suffix: "+" },
+    { label: "Projects Built", value: 6, prefix: "", suffix: "+" },
+    { label: "Certifications", value: 8, prefix: "", suffix: "+" },
+    { label: "Hackathon Win", value: 2, prefix: "", suffix: " 🏆" },
   ];
 
   const skillCategories = [
@@ -37,7 +37,7 @@ export default function Resume() {
     },
     {
       title: "AI / ML", icon: <Brain size={24} />, delay: 0.2,
-      skills: ["Machine Learning", "Deep Learning", "NLP", "Generative AI", "Data Science", "Data Visualization"]
+      skills: ["Machine Learning", "Deep Learning", "NLP", "Generative AI", "Data Science", "Data Visualization", "LLMs", "Model Training", "Prompt Engineering", "Azure AI"]
     },
     {
       title: "Web & Backend", icon: <Globe size={24} />, delay: 0.4,
@@ -45,7 +45,7 @@ export default function Resume() {
     },
     {
       title: "Tools & Cloud", icon: <Cloud size={24} />, delay: 0.6,
-      skills: ["AWS", "Figma", "Git", "Jupyter", "VS Code"]
+      skills: ["AWS", "Figma", "Git", "Jupyter", "VS Code", "Microsoft Azure", "Microsoft SQL Server"]
     }
   ];
 
@@ -101,11 +101,7 @@ export default function Resume() {
               className="flex flex-col justify-center"
             >
               <p className="text-lg md:text-[18px] leading-relaxed text-[var(--text-muted)] font-[family-name:--font-sans] mb-8">
-                "I'm a CS & Data Analytics student at IIT Patna who builds things
-                at the intersection of AI and real-world impact. From agricultural
-                AI platforms to generative models, I turn data into decisions and
-                ideas into products. Currently exploring the frontiers of ML,
-                NLP, and full-stack development."
+                "I'm a CS & Data Analytics student (B.S.) at IIT Patna who builds at the intersection of AI and real-world impact. Currently a Research Intern at IIT Indore working on LLMs and Generative AI, and a Microsoft Learn Student Ambassador. From agricultural AI platforms to generative models, I turn data into decisions and ideas into scalable products. I'm actively exploring ML, NLP, LLMs, and full-stack development — always looking to build technology that solves real problems."
               </p>
 
               <div className="flex gap-6">

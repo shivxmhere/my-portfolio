@@ -31,11 +31,11 @@ function Typewriter({ words }: { words: string[] }) {
 
 export default function Hero() {
   const roles = [
-    "Data Analyst",
-    "AI / ML Developer",
-    "IIT Patna — CS & Data Analytics",
-    "Full Stack Builder",
-    "Generative AI Explorer"
+    "Research Intern @ IIT Indore",
+    "MLSA @ Microsoft",
+    "CS & Data Analytics @ IIT Patna",
+    "National Hackathon Winner",
+    "Python · Generative AI · System Design"
   ];
 
   const floatingTags = ["Python", "React", "ML", "FastAPI", "SQL", "AWS", "NLP", "Next.js"];

@@ -3,25 +3,46 @@ import { motion, useScroll, useSpring } from 'motion/react';
 
 const experiences = [
   {
-    role: "B.Tech Computer Science & Data Analytics",
-    company: "IIT Patna",
-    period: "2025 – 2029",
-    description: "Focus on Data Structures, Algorithms, Machine Learning, and Statistical Analysis. National Hackathon Winner and active participant in technical clubs.",
-    icon: "🎓"
+    role: "Research Intern",
+    company: "IIT Indore",
+    period: "May 2026 – Present",
+    description: "Working on Large Language Models (LLMs), model training, dataset curation, and Generative AI research under faculty supervision at IIT Indore.",
+    icon: "🔬"
+  },
+  {
+    role: "Microsoft Learn Student Ambassador",
+    company: "Microsoft",
+    period: "March 2026 – Present",
+    description: "Selected as Microsoft Learn Student Ambassador representing Microsoft at IIT Patna. Contributor ID: studentamb_508115. Organizing AI/ML workshops and tech events for the IIT Patna student community. Part of a global network of 10,000+ student ambassadors. Working on Azure AI, GitHub, and Microsoft Learn content creation.",
+    icon: "🌟"
+  },
+  {
+    role: "Hybrid Programs Coordinator",
+    company: "Student Technical Council, IIT Patna",
+    period: "January 2026 – Present",
+    description: "Optimizing hybrid infrastructure for the Student Technical Council using advanced collaboration tools. Developing workflows for digital content delivery and real-time technical support. Analyzing program metrics to improve engagement and scale technical outreach.",
+    icon: "⚙️"
+  },
+  {
+    role: "Creative Team",
+    company: "Google Developer Group IIT Patna",
+    period: "Dec 2025 – Jan 2026",
+    description: "Contributed to creative and tech initiatives for GDG events and tech community engagement at IIT Patna.",
+    icon: "🎨"
   },
   {
     role: "Data Analytics Intern",
     company: "InAmigos Foundation",
     period: "Sep 2025 – Oct 2025",
-    description: "Automated social media workflows using Python scripting which boosted efficiency by 60%. Performed exploratory data analysis and built technical reliability solutions.",
+    description: "Developed Python-based automation workflows for social media content generation. Created digital content strategy reaching 10,000+ audience. Led cross-functional projects between design and tech teams. Resolved critical platform issues improving deployment reliability by 40%.",
     icon: "💼"
   },
   {
-    role: "Higher National Diploma in French",
-    company: "Hansraj College",
-    period: "2026 – 2029",
-    description: "Complementary advanced language and cultural studies alongside technical B.Tech curriculum.",
-    icon: "🏫"
+    role: "B.S. (Bachelor of Science) Computer Science & Data Analytics",
+    company: "IIT Patna",
+    period: "2025 – 2029",
+    description: "Focus on Data Structures, Algorithms, Machine Learning, and Statistical Analysis. National Hackathon Winner and active participant in technical clubs.",
+    icon: "🎓"
   }
 ];
 
