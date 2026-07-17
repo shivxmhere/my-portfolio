@@ -1,12 +1,30 @@
 import React, { useRef } from 'react';
 import { motion, useScroll, useSpring } from 'motion/react';
 
-const experiences = [
+interface Experience {
+  role: string;
+  company: string;
+  period: string;
+  description: string;
+  bullets?: string[];
+  tags?: string[];
+  icon: string;
+}
+
+const experiences: Experience[] = [
   {
-    role: "Research Intern",
+    role: "Research Intern – Multimodal Content Safety & AI-Assisted Generation",
     company: "IIT Indore",
-    period: "May 2026 – Present",
-    description: "Working on Large Language Models (LLMs), model training, dataset curation, and Generative AI research under faculty supervision at IIT Indore.",
+    period: "May 2026 – August 2026",
+    description: "Supervisor: Dr. Nagendra Kumar, IIT Indore (publishes at AAAI, ACL, EMNLP)",
+    bullets: [
+      "Built a fully automated pipeline to synthesize multimodal hateful content using diffusion-generated backgrounds, indirect LLM prompting for captions, and Python/PIL overlay.",
+      "Curated a novel dataset of 200+ synthetic memes across six Indian-centric hate categories (caste, gender, religion, politics, region, other), with paired neutral samples and auto-annotations.",
+      "Led a vulnerability study testing 12 indirect prompt strategies on 6 major LLMs (GPT‑4o, Gemini, Claude, LLaMA 3, Mistral, Mixtral), measuring bypass rates and exposing safety filter weaknesses.",
+      "Collaborated with a PhD student and final-year BTech to integrate the dataset into a multimodal detection model combining vision-language fusion and adaptive reasoning.",
+      "Outcome: Research paper in preparation for a top-tier AI conference; first comprehensive synthetic resource for Indian multimodal hate speech."
+    ],
+    tags: ["LLM Safety/Red-Teaming", "Dataset Engineering", "Diffusion Models", "LoRA", "LN‑Tuning", "Contrastive Learning", "Ethical AI"],
     icon: "🔬"
   },
   {
@@ -117,7 +135,7 @@ export default function Timeline() {
   );
 }
 
-function TimelineCard({ exp, side }: { exp: typeof experiences[0], side: 'left' | 'right' }) {
+function TimelineCard({ exp, side }: { exp: Experience, side: 'left' | 'right' }) {
   return (
     <motion.div
       initial={{ opacity: 0, x: side === 'left' ? 50 : -50 }}
@@ -144,6 +162,27 @@ function TimelineCard({ exp, side }: { exp: typeof experiences[0], side: 'left' 
       <p className="text-[var(--text-muted)] font-[family-name:--font-sans] leading-relaxed">
         {exp.description}
       </p>
+
+      {exp.bullets && exp.bullets.length > 0 && (
+        <ul className="mt-4 space-y-3">
+          {exp.bullets.map((bullet, i) => (
+            <li key={i} className="flex items-start gap-3 text-[var(--text-muted)] font-[family-name:--font-sans] text-[14px] leading-relaxed">
+              <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-[var(--accent-1)] flex-shrink-0" />
+              {bullet}
+            </li>
+          ))}
+        </ul>
+      )}
+
+      {exp.tags && exp.tags.length > 0 && (
+        <div className="mt-5 flex flex-wrap gap-2">
+          {exp.tags.map((tag, i) => (
+            <span key={i} className="px-3 py-1 text-[11px] font-mono rounded-full bg-[var(--accent-1)]/5 text-[var(--accent-1)] border border-[var(--accent-1)]/15">
+              {tag}
+            </span>
+          ))}
+        </div>
+      )}
     </motion.div>
   );
 }
