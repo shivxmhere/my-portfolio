@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { motion, useAnimation, useInView } from 'motion/react';
-import { Github, Linkedin, Code, Brain, Globe, Cloud } from 'lucide-react';
+import { Github, Linkedin, Code, Brain, Globe, Wrench } from 'lucide-react';
 
 const CountUp = ({ end, duration = 2 }: { end: number, duration?: number }) => {
   const [count, setCount] = useState(0);
@@ -33,19 +33,19 @@ export default function Resume() {
   const skillCategories = [
     {
       title: "Languages", icon: <Code size={24} />, delay: 0,
-      skills: ["Python", "SQL", "JavaScript", "HTML", "CSS"]
+      skills: ["Python", "SQL", "HTML", "CSS"]
     },
     {
       title: "AI / ML", icon: <Brain size={24} />, delay: 0.2,
-      skills: ["Machine Learning", "Deep Learning", "NLP", "Generative AI", "Data Science", "Data Visualization", "LLMs", "Model Training", "Prompt Engineering", "Azure AI"]
+      skills: ["Machine Learning", "Deep Learning", "NLP", "Generative AI", "Data Science", "Data Visualization", "LLMs", "Model Training", "Prompt Engineering"]
     },
     {
       title: "Web & Backend", icon: <Globe size={24} />, delay: 0.4,
-      skills: ["React", "Next.js", "FastAPI", "PostgreSQL"]
+      skills: ["FastAPI", "PostgreSQL"]
     },
     {
-      title: "Tools & Cloud", icon: <Cloud size={24} />, delay: 0.6,
-      skills: ["AWS", "Figma", "Git", "Jupyter", "VS Code", "Microsoft Azure", "Microsoft SQL Server"]
+      title: "Tools", icon: <Wrench size={24} />, delay: 0.6,
+      skills: ["Git", "PuTTY", "Jupyter Notebook", "VS Code", "Figma"]
     }
   ];
 

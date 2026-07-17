@@ -16,13 +16,13 @@ const experiences: Experience[] = [
     role: "Research Intern – Multimodal Content Safety & AI-Assisted Generation",
     company: "IIT Indore",
     period: "May 2026 – August 2026",
-    description: "Supervisor: Dr. Nagendra Kumar, IIT Indore (publishes at AAAI, ACL, EMNLP)",
+    description: "Supervisor: Dr. Nagendra Kumar, IIT Indore (publishes at AAAI)",
     bullets: [
       "Built a fully automated pipeline to synthesize multimodal hateful content using diffusion-generated backgrounds, indirect LLM prompting for captions, and Python/PIL overlay.",
       "Curated a novel dataset of 200+ synthetic memes across six Indian-centric hate categories (caste, gender, religion, politics, region, other), with paired neutral samples and auto-annotations.",
       "Led a vulnerability study testing 12 indirect prompt strategies on 6 major LLMs (GPT‑4o, Gemini, Claude, LLaMA 3, Mistral, Mixtral), measuring bypass rates and exposing safety filter weaknesses.",
       "Collaborated with a PhD student and final-year BTech to integrate the dataset into a multimodal detection model combining vision-language fusion and adaptive reasoning.",
-      "Outcome: Research paper in preparation for a top-tier AI conference; first comprehensive synthetic resource for Indian multimodal hate speech."
+      "Outcome: Research paper submitted to a top-tier AI conference; first comprehensive synthetic resource for Indian multimodal hate speech."
     ],
     tags: ["LLM Safety/Red-Teaming", "Dataset Engineering", "Diffusion Models", "LoRA", "LN‑Tuning", "Contrastive Learning", "Ethical AI"],
     icon: "🔬"
